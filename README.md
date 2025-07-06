@@ -11,7 +11,8 @@ WingsFly is a beautiful and minimal productivity app built with **Flutter**. Thi
 - 📊 **Daily Progress Tracker** – live progress bar with percentage completion  
 - 🧘‍♀️ **Daily Motivational Quote** – auto-updated quote of the day  
 - ➕ **Custom Modal Bottom Sheet** – elegant drawer with 4 activity types: Habit, Recurring Task, Task, Goal of the Day  
-- 🌓 **Light & Dark Theme Support** – seamless design adaptation based on system preference
+- 🌓 **Light & Dark Theme Support** – adapts to device's theme automatically  
+- 📱 **Fully Responsive** – adapts beautifully across all screen sizes using `MediaQuery`
 
 ---
 
@@ -40,27 +41,28 @@ lib/
 └── main.dart # App entry point with light & dark theme setup
 
 
+
 ---
 
 ## ⚙️ Setup Instructions
 
 1. **Clone the Repository**
 
-```bash
+
 git clone https://github.com/Dev-x777/wingsFly.git
 cd wingsFly
 flutter pub get
 flutter run
 
-🔍 Key Decisions & Assumptions
-Used StatefulWidget only for main state (selected date, task completion).
+##🔑 Key Decisions & Highlights
+🌓 In-built Dark Mode Support – Theme switches automatically based on system preference using ThemeMode.system.
 
-StatelessWidget used for reusable UI components like task card and date selector.
+📱 Responsive Design – Layout scales and adapts perfectly across small to large devices using MediaQuery, Flexible, and Expanded.
 
-Implemented auto-scrolling to the selected date in the horizontal picker.
+🔁 Clean Widget Structure – Reusable, stateless components used where applicable for maintainability.
 
-Quote of the day rotates based on current day.
+📆 Date Scroll Experience – Scrollable date picker with animated auto-scroll to the selected day.
 
-Assumed static task list for demo; in real use, a backend/database can be added.
+📋 Hardcoded Tasks for Demo – Tasks are static for the assignment but architecture supports future backend/data integration.
 
-Responsive layout ensured using Flexible, Expanded, and MediaQuery.
+💬 Quote of the Day – Dynamically changes each day based on current date logic.
